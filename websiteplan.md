@@ -58,6 +58,7 @@ Home | Code Editor | HTML | CSS | Accessibility | Ethics | Validation | AI
 
 Each page will have the same navigation bar so users can move between pages easily.
 The homepage will also include a link to my GitHub profile.
+I will make sure all pages include a link back to the homepage for easy navigation.
 
 ---
 
