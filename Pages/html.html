@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HTML Semantic Elements – CIS 130</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <nav aria-label="Main navigation">
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="code-editor.html">Code Editor</a></li>
+      <li><a href="html.html" class="active">HTML</a></li>
+      <li><a href="css.html">CSS</a></li>
+      <li><a href="accessibility.html">Accessibility</a></li>
+      <li><a href="ethics.html">Ethics</a></li>
+      <li><a href="validation.html">Validation</a></li>
+      <li><a href="ai.html">AI</a></li>
+    </ul>
+  </nav>
+
+  <header class="page-header">
+    <h1>HTML Semantic Elements</h1>
+    <p>Learning how to structure a webpage properly using HTML — the foundation of everything we built.</p>
+  </header>
+
+  <main id="main-content">
+
+    <section aria-labelledby="what-is-html">
+      <h2 id="what-is-html">Starting with HTML</h2>
+      <p>
+        HTML was the first thing we learned in this course, starting in Week 2. Before this class,
+        I had heard of HTML but had no idea how it actually worked. It stands for HyperText Markup
+        Language, and it is basically the skeleton of every webpage — it defines what content exists
+        and how it is organized, but not how it looks. That is CSS's job.
+      </p>
+      <p>
+        Every HTML file starts with the same basic structure: a <code>&lt;!DOCTYPE html&gt;</code>
+        declaration, an <code>&lt;html&gt;</code> tag, a <code>&lt;head&gt;</code> section for
+        metadata, and a <code>&lt;body&gt;</code> section for the actual content users see.
+      </p>
+    </section>
+
+    <section aria-labelledby="semantic-elements">
+      <h2 id="semantic-elements">What Makes an Element "Semantic"?</h2>
+      <p>
+        This was one of the more important concepts from Week 2. A semantic element is one that
+        describes the meaning of its content — not just how it looks on screen. For example,
+        using <code>&lt;header&gt;</code> tells the browser and screen readers "this is the header
+        of the page." Using a generic <code>&lt;div&gt;</code> does not communicate anything like that.
+      </p>
+      <p>
+        The difference matters a lot for accessibility and also for how search engines read your page.
+        I started using semantic tags in all my assignments after learning this, and it genuinely
+        makes your code easier to read too.
+      </p>
+
+      <h3>The Main Semantic Tags</h3>
+      <ul>
+        <li><strong>&lt;header&gt;</strong> — The top section of the page, usually has the title or logo.</li>
+        <li><strong>&lt;nav&gt;</strong> — Contains navigation links. Screen readers specifically look for this tag.</li>
+        <li><strong>&lt;main&gt;</strong> — The primary content of the page. Should only appear once per page.</li>
+        <li><strong>&lt;section&gt;</strong> — A standalone section of content, each with its own heading.</li>
+        <li><strong>&lt;article&gt;</strong> — Self-contained content that could stand on its own, like a card or blog post.</li>
+        <li><strong>&lt;aside&gt;</strong> — Supporting content that is related but not central, like a sidebar.</li>
+        <li><strong>&lt;footer&gt;</strong> — The bottom of the page, usually has copyright info or extra links.</li>
+      </ul>
+
+      <div class="tip-box">
+        <p><strong>Good habit:</strong> Before you start building a page, sketch out which semantic tags you will use. It makes writing the actual HTML much faster and keeps your structure clean from the start.</p>
+      </div>
+    </section>
+
+    <section aria-labelledby="other-html">
+      <h2 id="other-html">Other HTML Basics From Week 2</h2>
+      <p>
+        Along with semantic structure, Week 2 covered the content elements I used in almost every
+        assignment:
+      </p>
+      <ul>
+        <li><strong>Headings</strong> — <code>&lt;h1&gt;</code> through <code>&lt;h6&gt;</code>. Only one <code>&lt;h1&gt;</code> per page, and they should go in order without skipping levels.</li>
+        <li><strong>Paragraphs</strong> — <code>&lt;p&gt;</code> for any block of text.</li>
+        <li><strong>Lists</strong> — <code>&lt;ul&gt;</code> for bullet points, <code>&lt;ol&gt;</code> for numbered lists, both using <code>&lt;li&gt;</code> for each item.</li>
+        <li><strong>Links</strong> — <code>&lt;a href="url"&gt;</code> to link to other pages or external sites.</li>
+        <li><strong>Images</strong> — <code>&lt;img src="path" alt="description"&gt;</code>. The alt text is required for accessibility.</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="article-section">
+      <h2 id="article-section">Helpful Article</h2>
+      <p>
+        This article from freeCodeCamp is one of the clearest explanations of semantic HTML I found
+        during the semester. It goes through each semantic element with examples and explains why
+        using them matters for both accessibility and SEO. The Week 2 lesson pointed us to this
+        resource and it is definitely worth bookmarking.
+      </p>
+      <p>
+        <a class="article-link"
+           href="https://www.freecodecamp.org/news/semantic-html5-elements/"
+           target="_blank"
+           rel="noopener noreferrer">
+          Semantic HTML5 Elements Explained – freeCodeCamp
+        </a>
+      </p>
+    </section>
+
+    <section aria-labelledby="video-section">
+      <h2 id="video-section">Course Video</h2>
+      <p>
+        This is the video from our Week 2 course material on how to insert images in HTML.
+        Adding images was something that tripped me up at first — getting the file path right,
+        remembering the alt attribute, and understanding relative vs. absolute paths. This video
+        cleared all of that up for me.
+      </p>
+      <div class="video-wrapper">
+        <iframe
+          src="https://www.youtube.com/embed/oopzfHTEm-E"
+          title="How to Insert Images in HTML – Course Video Week 2"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>CIS 130 Final Project &mdash; Spring 2026 &mdash; <a href="../index.html">Back to Home</a></p>
+  </footer>
+
+</body>
+</html>

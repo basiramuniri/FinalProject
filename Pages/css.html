@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSS Layout and Responsive Design – CIS 130</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <nav aria-label="Main navigation">
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="code-editor.html">Code Editor</a></li>
+      <li><a href="html.html">HTML</a></li>
+      <li><a href="css.html" class="active">CSS</a></li>
+      <li><a href="accessibility.html">Accessibility</a></li>
+      <li><a href="ethics.html">Ethics</a></li>
+      <li><a href="validation.html">Validation</a></li>
+      <li><a href="ai.html">AI</a></li>
+    </ul>
+  </nav>
+
+  <header class="page-header">
+    <h1>CSS Layout and Responsive Design</h1>
+    <p>How I learned to style webpages and make them look good on every screen size.</p>
+  </header>
+
+  <main id="main-content">
+
+    <section aria-labelledby="what-is-css">
+      <h2 id="what-is-css">What Is CSS and Why Does It Matter?</h2>
+      <p>
+        CSS stands for Cascading Style Sheets. If HTML is the skeleton of a webpage, then CSS is
+        everything that makes it look the way it does — the colors, fonts, spacing, and layout.
+        We started learning CSS in Week 3, and it quickly became the part of the course I spent
+        the most time on.
+      </p>
+      <p>
+        One of the most important rules in this course was to always use an <strong>external
+        stylesheet</strong>. That means all your CSS goes in a separate <code>.css</code> file
+        and gets linked to your HTML pages using a <code>&lt;link&gt;</code> tag in the
+        <code>&lt;head&gt;</code>. No inline styles, no internal style blocks — external only.
+        At first this felt like extra work, but once I had multiple pages sharing the same stylesheet
+        it made total sense.
+      </p>
+    </section>
+
+    <section aria-labelledby="css-basics">
+      <h2 id="css-basics">Core CSS Concepts</h2>
+
+      <h3>Selectors, Properties, and Values</h3>
+      <p>
+        CSS works by targeting HTML elements with a selector and then applying style rules to them.
+        For example, <code>p { color: #333; font-size: 1rem; }</code> targets all paragraph tags
+        and sets their color and size. You can target by element type, class name, or ID.
+        Week 3 covered the difference between these and when to use each one.
+      </p>
+
+      <h3>Colors and Fonts</h3>
+      <p>
+        Week 5 went deeper into color and typography. I learned how to use Google Fonts to bring
+        in custom typefaces that look much better than the browser defaults. For colors, I used
+        CSS custom properties (variables) to define my color palette once at the top of my
+        stylesheet and reuse them everywhere — which made it easy to stay consistent across all pages.
+      </p>
+
+      <h3>The Box Model</h3>
+      <p>
+        Every HTML element is a box made up of four layers: content, padding, border, and margin.
+        Understanding the box model from Week 4 was key to controlling spacing. Once I got this,
+        a lot of layout problems I was having suddenly made sense.
+      </p>
+
+      <h3>Comments in CSS</h3>
+      <p>
+        Week 4 also taught us how to write comments in both HTML and CSS. In CSS, a comment looks
+        like this: <code>/* this is a comment */</code>. I started using comments to label sections
+        of my stylesheet so I could find things faster.
+      </p>
+
+      <div class="tip-box">
+        <p><strong>Tip:</strong> Use CSS variables for your colors and fonts at the top of your stylesheet. It makes changing your whole site's color scheme a one-line edit instead of hunting through every rule.</p>
+      </div>
+    </section>
+
+    <section aria-labelledby="layout-section">
+      <h2 id="layout-section">Flexbox and CSS Grid</h2>
+
+      <h3>Flexbox</h3>
+      <p>
+        Flexbox was covered in Week 4 and it completely changed how I think about layout. Before
+        learning it, I was using margins and padding to try to line things up — which was a mess.
+        With <code>display: flex</code>, you can align items in a row or column and control spacing
+        with just a few properties. I used it for my navigation bar and for centering content on pages.
+      </p>
+
+      <h3>CSS Grid</h3>
+      <p>
+        CSS Grid is more powerful than Flexbox for two-dimensional layouts — meaning you control
+        both rows and columns at the same time. I used <code>display: grid</code> with
+        <code>grid-template-columns: repeat(auto-fit, minmax(200px, 1fr))</code> to build the
+        card layout on my homepage. It automatically adjusts the number of columns based on
+        screen width, which also helped with responsiveness.
+      </p>
+    </section>
+
+    <section aria-labelledby="responsive-section">
+      <h2 id="responsive-section">Responsive Design</h2>
+      <p>
+        Week 12 focused on responsive design, which means making your site look good on phones,
+        tablets, and desktop screens — not just one size. The main tool for this is the
+        <strong>media query</strong>, which lets you apply different CSS rules depending on
+        the screen width.
+      </p>
+      <p>
+        For example, on larger screens my site shows a multi-column grid. On screens under 768px
+        wide, a media query switches it to a single column so nothing gets squished. I also used
+        the <code>viewport</code> meta tag in the HTML <code>&lt;head&gt;</code> — without it,
+        mobile browsers zoom out and ignore your responsive styles completely.
+      </p>
+    </section>
+
+    <section aria-labelledby="article-section">
+      <h2 id="article-section">Helpful Article</h2>
+      <p>
+        The W3Schools introduction to CSS is where I went whenever I needed a quick refresher
+        on syntax or a specific property. It is straightforward, has live examples you can edit,
+        and covers everything from the basics to more advanced topics like Flexbox and Grid.
+        It was one of the most-visited links from our Week 3 course materials.
+      </p>
+      <p>
+        <a class="article-link"
+           href="https://www.w3schools.com/css/css_intro.asp"
+           target="_blank"
+           rel="noopener noreferrer">
+          Introduction to CSS – W3Schools
+        </a>
+      </p>
+    </section>
+
+    <section aria-labelledby="video-section">
+      <h2 id="video-section">Course Video</h2>
+      <p>
+        This video from our Week 3 course material walks through how to create an external CSS
+        stylesheet and properly link it to an HTML page. Getting this right is the foundation
+        for everything else in CSS — if your stylesheet is not linked correctly, none of your
+        styles will show up. I made that mistake more than once before watching this.
+      </p>
+      <div class="video-wrapper">
+        <iframe
+          src="https://www.youtube.com/embed/eaNssyeabmA"
+          title="How to Create an External CSS Stylesheet – Course Video Week 3"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>CIS 130 Final Project &mdash; Spring 2026 &mdash; <a href="../index.html">Back to Home</a></p>
+  </footer>
+
+</body>
+</html>ss
