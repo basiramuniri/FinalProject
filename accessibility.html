@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Accessibility – CIS 130</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <nav aria-label="Main navigation">
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="code-editor.html">Code Editor</a></li>
+      <li><a href="html.html">HTML</a></li>
+      <li><a href="css.html">CSS</a></li>
+      <li><a href="accessibility.html" class="active">Accessibility</a></li>
+      <li><a href="ethics.html">Ethics</a></li>
+      <li><a href="validation.html">Validation</a></li>
+      <li><a href="ai.html">AI</a></li>
+    </ul>
+  </nav>
+
+  <header class="page-header">
+    <h1>Accessibility</h1>
+    <p>Building websites that everyone can use — regardless of ability or disability.</p>
+  </header>
+
+  <main id="main-content">
+
+    <section aria-labelledby="what-is-a11y">
+      <h2 id="what-is-a11y">What Is Web Accessibility?</h2>
+      <p>
+        Before Week 7, I honestly had not thought much about who could or could not use a website.
+        I just assumed if it looked fine on my screen, it was fine. This week completely changed
+        how I think about building for the web.
+      </p>
+      <p>
+        Web accessibility means making sure your site works for people with visual, auditory, motor,
+        or cognitive disabilities. That includes people who use screen readers, people who navigate
+        with only a keyboard, and people with color vision differences. It is not a bonus feature —
+        it is part of building a website correctly. In many cases it is also a legal requirement.
+      </p>
+    </section>
+
+    <section aria-labelledby="key-practices">
+      <h2 id="key-practices">What I Applied to My Own Pages</h2>
+
+      <h3>Alt Text on Every Image</h3>
+      <p>
+        Every <code>&lt;img&gt;</code> tag needs an <code>alt</code> attribute. Screen readers read
+        that text aloud to describe the image to someone who cannot see it. If the image is just
+        decorative, you still include the attribute but leave it empty: <code>alt=""</code>. This
+        tells screen readers to skip it rather than read out a confusing filename.
+      </p>
+
+      <h3>Proper Heading Order</h3>
+      <p>
+        Headings need to go in logical order — <code>&lt;h1&gt;</code> first, then
+        <code>&lt;h2&gt;</code>, then <code>&lt;h3&gt;</code>, and so on. You should never skip
+        a level. Screen reader users often jump between headings to navigate a page, so if your
+        heading structure is broken, the page becomes very hard to get around.
+      </p>
+
+      <h3>Color Contrast</h3>
+      <p>
+        Text needs to be readable against its background. The standard is a contrast ratio of at
+        least 4.5:1 for regular text. I used the WebAIM Contrast Checker to test all my color
+        combinations before finalizing them. Some colors that look fine to me might be nearly
+        invisible to someone with low vision or color blindness.
+      </p>
+
+      <h3>Keyboard Navigation</h3>
+      <p>
+        Not everyone uses a mouse. I added a "Skip to main content" link at the very top of each
+        page — it is invisible unless you tab to it, but keyboard users can use it to jump past
+        the navigation and get straight to the content. This is one of those small details that
+        makes a big difference for certain users.
+      </p>
+
+      <h3>Descriptive Link Text</h3>
+      <p>
+        Links should describe where they go. "Click here" or "read more" means nothing to a screen
+        reader user who is tabbing through links on a page. I made sure all my links use text that
+        makes sense on its own.
+      </p>
+
+      <div class="tip-box">
+        <p><strong>Quick check:</strong> Tab through your page using only your keyboard and see if you can reach everything. If you cannot, neither can your keyboard-only users.</p>
+      </div>
+    </section>
+
+    <section aria-labelledby="tools-section">
+      <h2 id="tools-section">Tools We Used to Test Accessibility</h2>
+      <ul>
+        <li>
+          <strong>WebAIM Contrast Checker</strong> — Tests your text and background color combination
+          and tells you if it passes WCAG standards.
+          <a class="article-link" href="https://webaim.org/resources/contrastchecker/" target="_blank" rel="noopener noreferrer">Open Contrast Checker</a>
+        </li>
+        <li>
+          <strong>WAVE Accessibility Tool</strong> — Analyzes a live webpage and highlights accessibility
+          errors visually right on the page. Really useful for seeing exactly where the problems are.
+          <a class="article-link" href="https://wave.webaim.org/" target="_blank" rel="noopener noreferrer">Open WAVE Tool</a>
+        </li>
+        <li>
+          <strong>Chrome Lighthouse</strong> — Built into Chrome's developer tools. Gives your page
+          an accessibility score and lists specific things to fix.
+        </li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="article-section">
+      <h2 id="article-section">Helpful Article</h2>
+      <p>
+        The WebAIM Introduction to Web Accessibility was one of the assigned readings for Week 7
+        and it is genuinely one of the best overviews I came across. It explains why accessibility
+        matters, who it affects, and the principles behind it without being overly technical.
+        Worth reading even if it is not required for your class.
+      </p>
+      <p>
+        <a class="article-link"
+           href="https://webaim.org/intro/"
+           target="_blank"
+           rel="noopener noreferrer">
+          Introduction to Web Accessibility – WebAIM
+        </a>
+      </p>
+    </section>
+
+    <section aria-labelledby="video-section">
+      <h2 id="video-section">Course Video</h2>
+      <p>
+        This video from our Week 7 course material demonstrates how to test color contrast using
+        the WebAIM tool. It was helpful to actually see someone walk through the process step by
+        step — I did not realize how easy it was to fail the contrast ratio test with colors that
+        looked totally readable to me. After watching this I went back and fixed the colors on
+        several of my earlier pages.
+      </p>
+      <div class="video-wrapper">
+        <iframe
+          src="https://www.youtube.com/embed/4qglOhoN7Gc"
+          title="How to Test Color Contrast with WebAIM – Course Video Week 7"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>CIS 130 Final Project &mdash; Spring 2026 &mdash; <a href="../index.html">Back to Home</a></p>
+  </footer>
+
+</body>
+</html>
